@@ -1,1 +1,5 @@
-
+country,iso_code,year,nuclear_electricity,renewables_electricity,co2_mtonne,population,gdp_per_capita_usd,decarbonisation_score
+United States,USA,1965,43.2,120.4,5100,194000000,3100,45.2
+France,FRA,1965,5.8,20.1,620,49000000,2800,52.4
+Japan,JPN,1965,1.2,15.3,780,98000000,2400,47.1
+...
