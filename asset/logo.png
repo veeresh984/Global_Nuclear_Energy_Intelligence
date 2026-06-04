@@ -1,1 +1,60 @@
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
 
+width = 800
+height = 800
+
+img = Image.new(
+    "RGB",
+    (width, height),
+    color=(14, 17, 23)
+)
+
+draw = ImageDraw.Draw(img)
+
+try:
+    title_font = ImageFont.truetype(
+        "arial.ttf",
+        60
+    )
+
+    subtitle_font = ImageFont.truetype(
+        "arial.ttf",
+        30
+    )
+
+except:
+    title_font = ImageFont.load_default()
+    subtitle_font = ImageFont.load_default()
+
+draw.text(
+    (250, 120),
+    "⚛️",
+    fill=(0, 212, 255)
+)
+
+draw.text(
+    (100, 280),
+    "GLOBAL NUCLEAR",
+    fill="white",
+    font=title_font
+)
+
+draw.text(
+    (120, 380),
+    "ENERGY INTELLIGENCE",
+    fill=(76, 175, 80),
+    font=title_font
+)
+
+draw.text(
+    (280, 520),
+    "1965 - 2025",
+    fill="white",
+    font=subtitle_font
+)
+
+img.save("logo.png")
+
+print("Logo Created")
